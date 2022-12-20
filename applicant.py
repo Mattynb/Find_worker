@@ -17,7 +17,7 @@ class Applicant:
         self.criminal = False  # as in criminal history.
         if self.license == False:
             difficulty_boost = .1
-            criminal_chance_multipliers = {'male': {'black': .3, 'white': .2, 'hispanic': .2, 'asian':.1}, 'female': {'black': .25, 'white': .15, 'hispanic': .15, 'asian':.05}}
+            criminal_chance_multipliers = {'male': {'black': .2, 'white': .2, 'hispanic': .2, 'asian':.2}, 'female': {'black': .15, 'white': .15, 'hispanic': .15, 'asian':.15}}
             threshold = 1 - criminal_chance_multipliers[self.gender][self.race]
             if random.random() + difficulty_boost > 0 + threshold:
                 self.criminal = True
